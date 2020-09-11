@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5000;
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*'),
@@ -13,11 +13,10 @@ app.get('/', (req, res) => res.send('Home'));
 app.get('/statistics', (req, res) => {
   try {
     const { fetchData } = require('./src/data/statisticsService');
-    const data = fetchData();
-    res.json(data);
+    fetchData(res);
   } catch (error) {
     res.statusCode = 500;
-    res.send(error.message);
+    res.send('Error retrieving data...');
   }
 });
 
