@@ -6,7 +6,7 @@ The structure of the solution consists of an Api and a Client.
 
 The purpose of the following lines is to explain each component of the solution.
 
-** API
+## API
 
 This project was created using Node.js and Express.js.
 
@@ -43,12 +43,11 @@ In order to create the container you need to have docker installed.
 Execute this command in order to access the container.
 ``docker exec -it mongodb /bin/sh; exit``
 
-``
-  mongo
+``mongo``
 
-  use drixit
+``use drixit``
 
-  db.statistics.save([{
+``db.statistics.save([{
     "username": "Delphinia",
     "name": "Delphinia",
     "acc6": 95,
@@ -168,10 +167,9 @@ Execute this command in order to access the container.
     "bar1": 87,
     "bar2": 83,
     "bar3": 53
-  }])
-``
+  }])``
 
-** CLIENT
+## CLIENT
 
 ### Running the project
 
