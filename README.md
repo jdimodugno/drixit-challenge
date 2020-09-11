@@ -22,7 +22,7 @@ By default, the app will be listening at [http://localhost:5000](http://localhos
 #### `yarn start:mongo`
 
 You can also provide an MongoDB url in order to consume from an external data source.
-Before executing this command, you should populate the database.
+Before executing this command, you should populate the database and set the DB_ENDPOINT environment variable. [by default is: DB_ENDPOINT=mongodb://127.0.0.1:27017]
 
 db: 'drixit'
 collection: 'statistics'
